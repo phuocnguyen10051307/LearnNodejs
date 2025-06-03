@@ -9,9 +9,11 @@ const port = process.env.PORT; // port
 
 
 // config template engine
+// // paht.join là thư viên tìm kiếm 1 file trên hệ thống đã có sẵn trong js 
 app.set('views',path.join(__dirname,'views'))
-// paht.join là thư viên tìm kiếm 1 file trên hệ thống đã có sẵn trong js 
 app.set('view engine', 'ejs')
+app.use(express.static(path.join(__dirname,'public')))
+
 
 // khai báo route
 app.get('/', (req, res) => {
