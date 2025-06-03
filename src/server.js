@@ -1,7 +1,12 @@
 const express = require('express')// common js
 const path = require('path') 
 const app = express()// app express 
-const port = 8000; // port 
+
+require('dotenv').config();
+const port = process.env.PORT; // port 
+// console.log(process.env)
+
+
 
 // config template engine
 app.set('views',path.join(__dirname,'views'))
