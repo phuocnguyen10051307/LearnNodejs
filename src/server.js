@@ -10,14 +10,13 @@ const webRoutes = require("./routes/web");
 // config template engine
 configViewEngine(app);
 //khai báo routes
-app.use("/test", webRoutes);
+app.use("/", webRoutes);
+// connection.query("select * from users", function (err, results, fields) {
+//   console.log(results);// results lấy dữ liệu 
+//   console.log(fields);// hiện cột định nghĩa trong database
+// });
 
 // test connection
-
-connection.query("select * from users", function (err, results, fields) {
-  console.log(results);// results lấy dữ liệu 
-  console.log(fields);// hiện cột định nghĩa trong database
-});
 
 app.listen(port, () => {
   console.log(`Example app listening on port ${port}`);
