@@ -1,9 +1,11 @@
 const express = require("express");
+const {getAllUser} = require("../service/CRUDservices")
 
 // nơi xử lí logic
 const connection = require("../config/database");
-const handleGetHomePage = (req, res) => {
-  return res.render("home.ejs");
+const handleGetHomePage = async(req, res) => {
+  let results =  await getAllUser()
+  return res.render("home.ejs",{listUser:results});
 };
 const handleGetAbc = (req, res) => {
   res.send("my name is phuoc ");
