@@ -9,7 +9,7 @@ const { handleGetHomePage , handleGetAbc,postCreateUser,getCreateHome, getEdit} 
 router.get('/', handleGetHomePage)
 router.get('/abc',handleGetAbc)
 router.get('/create',getCreateHome)
-router.get('/edit',getEdit)
+router.get('/edit/:id',getEdit)
 router.post('/create-user',postCreateUser)
 //router.delete('/delete-user',deleteUser)
 

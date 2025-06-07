@@ -24,6 +24,7 @@ const getCreateHome = (req, res) => {
   res.render("create.ejs");
 };
 const getEdit= (req,res)=>{
+  const userId = req.params.id
   res.render("edit.ejs")
 }
 //express.json() convert các kiểu dữ liệu của bạn sang kiểu json object của javascript
