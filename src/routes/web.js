@@ -1,6 +1,6 @@
 const express = require('express')
 const router = express.Router();
-const { handleGetHomePage , handleGetAbc} = require('../controllers/homeControllers')
+const { handleGetHomePage , handleGetAbc,postCreateUser} = require('../controllers/homeControllers')
 
 // khai báo route
 // router.METHOD('/route',handler)
@@ -9,8 +9,6 @@ const { handleGetHomePage , handleGetAbc} = require('../controllers/homeControll
 router.get('/', handleGetHomePage)
 router.get('/abc',handleGetAbc)
 
-router.get('/hello', (req, res) => {
-  res.send('<h1>hello world</h1>')
-})
+router.post('/create-user',postCreateUser)
 
 module.exports = router // exports default 

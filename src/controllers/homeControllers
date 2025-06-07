@@ -1,15 +1,16 @@
 // nơi xử lí logic
 const connection = require('../config/database')
 const handleGetHomePage = (req, res) => {
-  // process data
-  //call model
-  let users = [];
-  connection.query("select * from users", function (err, results, fields) {
-    users = results;
-    res.send(JSON.stringify(users))
-  });
+  return res.render("home.ejs");
 };
 const handleGetAbc = (req, res) => {
   res.send("my name is phuoc ");
 };
-module.exports = { handleGetHomePage, handleGetAbc };
+const postCreateUser = (req, res)=>{
+  console.log(req.body)
+  res.send('create a new user')
+}
+
+//express.json() convert các kiểu dữ liệu của bạn sang kiểu json object của javascript 
+// đọc trên express.json()
+module.exports = { handleGetHomePage, handleGetAbc, postCreateUser };
