@@ -39,10 +39,38 @@ li a:hover:not(.active) {
   padding-top:200px;
 
 }
+
+
+
+
+.table-container{
+  padding:15px 20px;
+}
+.title{
+  font-weight: 600;
+  font-size: 25px;
+  padding-bottom: 10px;
+}
 .input-group {
   padding:10px;
 }
 button{
   margin: 10px;
   cursor: pointer;
+}
+table, td, th {  
+  border: 1px solid #ddd;
+  text-align: left;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th, td {
+  padding: 15px;
+}
+td:hover{
+  background-color:#04aa6d;
 }
