@@ -18,17 +18,20 @@
           <th>City</th>
           <th>Actions</th>
         </tr>
+
+        <% listUser.forEach(function(user) { %>
         <tr>
-          <%= JSON.stringify(listUser) %>
-          <td>Peter</td>
-          <td>Griffin</td>
-          <td>$100</td>
-          <td>aaa</td>
+          <td><%= user.id %></td>
+          <td><%= user.email %></td>
+          <td><%= user.name %></td>
+          <td><%= user.city %></td>
           <td>
             <button>edit</button>
             <button>delete</button>
           </td>
         </tr>
+
+        <% }); %>
       </table>
     </div>
   </body>
