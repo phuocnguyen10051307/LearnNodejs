@@ -1,6 +1,6 @@
 const express = require('express')
 const router = express.Router();
-const { handleGetHomePage , handleGetAbc,postCreateUser,getCreateHome} = require('../controllers/homeControllers')
+const { handleGetHomePage , handleGetAbc,postCreateUser,getCreateHome, getEdit} = require('../controllers/homeControllers')
 
 // khai báo route
 // router.METHOD('/route',handler)
@@ -9,6 +9,7 @@ const { handleGetHomePage , handleGetAbc,postCreateUser,getCreateHome} = require
 router.get('/', handleGetHomePage)
 router.get('/abc',handleGetAbc)
 router.get('/create',getCreateHome)
+router.get('/edit',getEdit)
 router.post('/create-user',postCreateUser)
 //router.delete('/delete-user',deleteUser)
 

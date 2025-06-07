@@ -23,6 +23,9 @@ const postCreateUser = async (req, res) => {
 const getCreateHome = (req, res) => {
   res.render("create.ejs");
 };
+const getEdit= (req,res)=>{
+  res.render("edit.ejs")
+}
 //express.json() convert các kiểu dữ liệu của bạn sang kiểu json object của javascript
 // đọc trên express.json()
-module.exports = { handleGetHomePage, handleGetAbc, postCreateUser, getCreateHome };
+module.exports = { handleGetHomePage, handleGetAbc, postCreateUser, getCreateHome, getEdit };
