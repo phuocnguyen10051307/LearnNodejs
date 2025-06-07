@@ -10,5 +10,6 @@ router.get('/', handleGetHomePage)
 router.get('/abc',handleGetAbc)
 
 router.post('/create-user',postCreateUser)
+//router.delete('/delete-user',deleteUser)
 
 module.exports = router // exports default 

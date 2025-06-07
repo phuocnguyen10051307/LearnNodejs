@@ -10,7 +10,6 @@ const hostname = process.env.HOST_NAME
 app.use(express.json())//for json
 app.use(express.urlencoded({extended:true})) // from for data
 
-
 // console.log(process.env)
 const configViewEngine = require("./config/viewEngine");
 const webRoutes = require("./routes/web");

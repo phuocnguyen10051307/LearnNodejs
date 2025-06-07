@@ -1,16 +1,26 @@
+const express = require("express")
+
 // nơi xử lí logic
-const connection = require('../config/database')
+const connection = require("../config/database");
 const handleGetHomePage = (req, res) => {
   return res.render("home.ejs");
 };
 const handleGetAbc = (req, res) => {
   res.send("my name is phuoc ");
 };
-const postCreateUser = (req, res)=>{
-  console.log(req.body)
-  res.send('create a new user')
-}
+const postCreateUser = (req, res) => {
+  let { email, createName, city } = req.body;
+  console.log(email, createName, city);
+  connection.query(
+    `insert into users (email,name, city) values (?, ?, ?);`,
+    [email, createName, city],
+    function (err, results) {
+      res.send("add new user success")
+    }
+  );
+};
 
-//express.json() convert các kiểu dữ liệu của bạn sang kiểu json object của javascript 
+
+//express.json() convert các kiểu dữ liệu của bạn sang kiểu json object của javascript
 // đọc trên express.json()
 module.exports = { handleGetHomePage, handleGetAbc, postCreateUser };
